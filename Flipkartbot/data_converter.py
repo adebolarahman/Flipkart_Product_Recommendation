@@ -3,7 +3,7 @@ from langchain_core.documents import Document
 
 def dataconverter():
 
-    product_data = pd.read_csv(r"../data/flipkart_product_review.csv")
+    product_data = pd.read_csv(r"C:\Users\User\Flipkart\data\flipkart_product_review.csv")
 
     data = product_data[["product_title", "review"]]
 
@@ -25,3 +25,6 @@ def dataconverter():
         doc = Document(page_content= entry['review'], metadata= metadata)
         docs.append(doc)    
     return docs
+
+#data=dataconverter()
+#print(data)
